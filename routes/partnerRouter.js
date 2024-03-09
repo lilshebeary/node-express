@@ -24,7 +24,7 @@ partnerRouter.route('/')
 partnerRouter.route('/:partnerId')
     .all((req, res, next) => {
         res.statusCode = 200;
-        res.setHeader('Content-Type', 'text/plaing');
+        res.setHeader('Content-Type', 'text/plain');
         next();
     })
     .get((req, res) => {
@@ -42,7 +42,7 @@ partnerRouter.route('/:partnerId')
         with description: ${req.body.description}`);
 })
 
-    .delete('/:partnerId', (req, res) => {
+    .delete((req, res) => {
     res.end(`Deleting partner with id: ${req.params.partnerId}`);
 });
 

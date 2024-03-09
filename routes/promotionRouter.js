@@ -24,7 +24,7 @@ promotionRouter.route('/')
 promotionRouter.route('/:promotionId')
     .all((req, res, next) => {
         res.statusCode = 200;
-        res.setHeader('Content-Type', 'text/plaing');
+        res.setHeader('Content-Type', 'text/plain');
         next();
     })
     .get((req, res) => {
@@ -42,7 +42,7 @@ promotionRouter.route('/:promotionId')
         with description: ${req.body.description}`);
 })
 
-    .delete('/:promotionId', (req, res) => {
+    .delete((req, res) => {
     res.end(`Deleting promotion with id: ${req.params.promotionId}`);
 });
 
